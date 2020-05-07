@@ -16,6 +16,7 @@
     />
     <script type="text/javascript" src="./js/view.js"></script>
     <title>SSU Menu</title>
+    <script> $(document).ready(function(){ if (!('url' in window) && ('webkitURL' in window)) { window.URL = window.webkitURL; } $('#camera').change(function(e){ $('#pic').attr('src', URL.createObjectURL(e.target.files[0])); }); }); </script>
   </head>
   <body>
 
@@ -23,17 +24,8 @@
       <section class="language">
         이미지를 업로드하세요 (그나라말)
         <form action="image" method="post" enctype="multipart/form-data">
-          <!--<script>
-            $(function(){
-                $('#camera').change(function(e){
-                    $('#pic').attr('src', URL.createObjectURL(e.target.files[0]));
-                });
-            });
-        </script>
-        <input type="file" id="camera" name="camera" capture="camera" accept="image/*" />
-        <br/>
-        <img id="pic" style="width:100%;" />-->
-          <input type="file" value="파일 선택(그나라말)"/>
+          <input type="file" id="camera" name="camera" capture="camera" accept="image/*" /> <br /> <img id="pic" style="width:100%;" />
+          <input type="file" value="파일 선택(그나라말)" name="img"/>
           <input type ="submit" value="업로드(그나라말)">
         </form>
       </section>
