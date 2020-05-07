@@ -16,6 +16,18 @@
     />
     <script type="text/javascript" src="./js/view.js"></script>
     <title>SSU Menu</title>
+    <script>
+       $(document).on("change", ".file-input", function(){
+     
+     $filename = $(this).val();
+
+     if($filename == "")
+         $filename = "파일을 선택해주세요.";
+
+     $(".filename").text($filename);
+
+ })
+    </script>
    </head>
   <body>
 
@@ -23,8 +35,28 @@
       <section class="language">
         이미지를 업로드하세요 (그나라말)
         <form action="image" method="post" enctype="multipart/form-data">
-          <input type="file" value="파일 선택(그나라말)" name="file"/>
-          <input type="file" value="사진 촬영(그나라말)" accept="image/*" capture="camera"> 
+
+          <div class="box-file-input">
+            <label>
+              <input type="file" name="ev_display_<?php echo $k; ?>" class="file-input" accept="image/*" capture="camera">
+            </label>
+            <span class="filename">파일을 선택해주세요.
+            </div>
+
+
+          <!--<div class="filebox"> 
+            <label for="ex_file">사진 촬영(그나라말)</label> 
+            <input type="file" accept="image/*" capture="camera"> 
+          </div>
+          <div class="filebox"> 
+            <label for="ex_file">파일 선택(그나라말)</label> 
+            <input type="file" name="file"/> 
+          </div>-->
+
+
+
+          <!--<input type="file" value="파일 선택(그나라말)" name="file"/>
+          <input type="file" value="사진 촬영(그나라말)" accept="image/*" capture="camera">-->
           <input type ="submit" value="업로드(그나라말)">
         </form>
       </section>

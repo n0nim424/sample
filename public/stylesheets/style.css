@@ -68,6 +68,53 @@ input {
   border: royalblue 3px solid;
 }
 
+.filebox label { 
+  display: inline-block; 
+  padding: .5em .75em; 
+  color: #999; 
+  font-size: inherit; 
+  line-height: normal; 
+  vertical-align: middle; 
+  background-color: #fdfdfd; 
+  cursor: pointer; 
+  border: 1px solid #ebebeb; 
+  border-bottom-color: #e2e2e2; 
+  border-radius: .25em; 
+} 
+.filebox input[type="file"] { /* 파일 필드 숨기기 */ 
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip:rect(0,0,0,0); 
+  border: 0; 
+}
+
+.box-file-input label{
+  display:inline-block;
+  background:#23a3a7;
+  color:#fff;
+  padding:0px 15px;
+  line-height:35px;
+  cursor:pointer;
+}
+
+.box-file-input label:after{
+  content:"사진 촬영";
+}
+
+.box-file-input .file-input{
+  display:none;
+}
+
+.box-file-input .filename{
+  display:inline-block;
+  padding-left:10px;
+}
+
+
 
 /* footer */
 .top {
